@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-image: url('https://marcondescesar.com.br/wp-content/uploads/2023/08/sao-jose-dos-campos-sao-paulo-brasil-04-2022xaavista-aerea-da-ponte-estaiada-em-sao-jose-dos-campos-conhecida-como-arco-da-inovacao-scaled.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background: linear-gradient(135deg, #f5f129 0%, #148df7 100%);
+    color: rgb(27, 21, 21);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.bandeira {
+    width: 200px;
+    height: auto;
+    position: absolute;
+    left: 150px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.pontos-turisticos {
+    padding: 60px 0;
+}
+
+.pontos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.ponto-card {
+    background: rgb(212, 212, 212);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 300px;
+    max-width: calc(50% - 30px);
+    display: flex;
+    flex-direction: column;
+}
+
+.ponto-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+}
+
+.ponto-imagem {
+    height: 220px;
+    overflow: hidden;
+}
+
+.ponto-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.ponto-card:hover .ponto-imagem img {
+    transform: scale(1.05);
+}
+
+.ponto-conteudo {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.ponto-conteudo h2 {
+    color: #0c69d3;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.ponto-conteudo p {
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.ponto-mapa {
+    height: 200px;
+    margin-top: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #fbff00;
+}
+
+.ponto-mapa iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+footer {
+    background-color: #066dce;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .ponto-card, .passo {
+        max-width: 100%;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .ponto-conteudo {
+        padding: 20px;
+    }
+    
+    .passos {
+        flex-direction: column;
+    }
+}
